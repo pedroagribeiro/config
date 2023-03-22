@@ -1,0 +1,23 @@
+#              _
+#             | |
+#      _______| |__  _ __ ___
+#     |_  / __| '_ \| '__/ __|
+#    _ / /\__ \ | | | | | (__
+#   (_)___|___/_| |_|_|  \___|
+
+export GPG_TTY=$(tty)
+export DOTFILES="$HOME/.dotfiles"
+
+for module in $(ls $DOTFILES/zsh/*.zsh); do
+  source $module
+done
+
+source $DOTFILES/zsh/aliases.zsh
+
+# go to working directory if it has one
+gtwd
+
+# for init_file in $(ls $DOTFILES/**/*.init); do
+#   source $init_file
+# done
+
