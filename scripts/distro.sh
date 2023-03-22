@@ -10,13 +10,13 @@ function symlink() {
   local SRC="$1"
   local DST="$2"
 
-  execute "ln -sfT ${SRC} ${DST}" "Symlinking $(basename $DST)"
+  execute "ln -s ${SRC} ${DST}" "Symlinking $(basename $DST)"
 }
 
 function install_package() {
   local PKG="$1"
   
-  if [[ get_os_name == 'darwin' ]]
+  if [[ $(get_os_name) == 'darwin' ]]
   then
     execute "brew install ${PKG}"
   else
