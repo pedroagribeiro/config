@@ -8,7 +8,7 @@ cd "${BASE_DIR}/.." || exit 127
 # shellcheck source=../scripts/utils.sh
 . scripts/utils.sh
 
-install_package i3
+install_package i3status
 
-symlink "$HOME/config/i3/config" "$HOME/.config/i3/config"
+symlink "$HOME/config/i3status/config" "$HOME/.config/i3status/config"
 
