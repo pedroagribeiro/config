@@ -1,6 +1,6 @@
 [user]
 	name = Pedro Ribeiro
-    useConfigOnly = true
+  useConfigOnly = true
 	email = pedrouminhoribeiro@gmail.com
 [include]
     path = ~/config/git/personal.config
