@@ -6,7 +6,7 @@
 #   (_)___|___/_| |_|_|  \___|
 
 export GPG_TTY=$(tty)
-export DOTFILES="$HOME/.dotfiles"
+export DOTFILES="$HOME/config"
 
 for module in $(ls $DOTFILES/zsh/*.zsh); do
   source $module
