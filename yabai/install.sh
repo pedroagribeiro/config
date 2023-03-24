@@ -10,7 +10,7 @@ cd "${BASE_DIR}/.." || exit 127
 
 install_package yabai
 
-symlink "$HOME/config/yabai/yabairc" "$HOME/.config/yabai/yabairc"
+symlink "$HOME/.dotfiles/yabai/yabairc" "$HOME/.config/yabai/yabairc"
 
 execute "brew services start yabai" "Starting the yabai brew service..."
 
