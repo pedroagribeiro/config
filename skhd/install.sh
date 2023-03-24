@@ -10,6 +10,6 @@ cd "${BASE_DIR}/.." || exit 127
 
 install_package skhd
 
-symlink "$HOME/config/skhd/skhdrc" "$HOME/.config/skhd/skhdrc"
+symlink "$HOME/.dotfiles/skhd/skhdrc" "$HOME/.config/skhd/skhdrc"
 
 execute "brew services start skhd" "Starting the skhd brew service..."
