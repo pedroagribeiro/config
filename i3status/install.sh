@@ -10,5 +10,5 @@ cd "${BASE_DIR}/.." || exit 127
 
 install_package i3status
 
-symlink "$HOME/config/i3status/config" "$HOME/.config/i3status/config"
+symlink "$HOME/.dotfiles/i3status/config" "$HOME/.config/i3status/config"
 
