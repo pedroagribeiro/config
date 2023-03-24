@@ -10,5 +10,5 @@ cd "${BASE_DIR}/.." || exit 127
 
 install_package neovim
 
-symlink "$HOME/config/neovim" "$HOME/.config/nvim"
+symlink "$HOME/.dotfiles/neovim" "$HOME/.config/nvim"
 
