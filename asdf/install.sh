@@ -30,3 +30,4 @@ execute "asdf plugin-update --all" "Update all plugins..."
 symlink ~/.dotfiles/asdf/asdfrc ~/.asdfrc
 
 symlink ~/.dotfiles/asdf/tool-versions ~/.tool-versions
+

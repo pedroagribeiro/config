@@ -12,5 +12,5 @@ execute "git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.git-fuzz
 
 execute "git -C $HOME/.git-fuzzy pull" "Updating git-fuzzy..." 
 
-symlink "$HOME/config/git/gitconfig" "$HOME/.gitconfig"
+symlink "$HOME/.dotfiles/git/gitconfig" "$HOME/.gitconfig"
 
