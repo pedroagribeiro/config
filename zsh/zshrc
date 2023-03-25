@@ -21,3 +21,17 @@ gtwd
 #   source $init_file
 # done
 
+# Docker atomatic initialization
+# Ensure Docker is running on WSL 2. This expects you've installed Docker and
+# Docker Compose directly within your WSL distro instead of Docker Desktop.
+DOCKER_DIR=/mnt/wsl/shared-docker
+DOCKER_SOCK="$DOCKER_DIR/docker.sock"
+export DOCKER_HOST="unix://$DOCKER_SOCK"
+if grep -q "microsoft" /proc/version > /dev/null 2>&1; then
+        if [ ! -S "$DOCKER_SOCK" ]; then
+                mkdir -pm o=,ug=rwx "$DOCKER_DIR"
+                sudo chgrp docker "$DOCKER_DIR"
+                /mnt/c/Windows/System32/wsl.exe -d $WSL_DISTRO_NAME sh -c "nohup sudo -b dockerd < /dev/null > $DOCKER_DIR/dockerd.log 2>&1"
+        fi
+fi
+

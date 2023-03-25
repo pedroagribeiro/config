@@ -52,3 +52,6 @@ alias mkt="make test"
 alias a="ansible"
 alias ac="ansible-console"
 alias ap="ansible-playbook"
+
+alias fix_docker_dns="sh $HOME/.dotfiles/docker/wsl/vpn-kit/run_foreground.sh"
+

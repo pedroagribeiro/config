@@ -3,16 +3,16 @@
   useConfigOnly = true
 	email = pedrouminhoribeiro@gmail.com
 [include]
-    path = ~/config/git/personal.config
+    path = ~/.dotfiles/git/personal.config
 [includeIf "gitdir:~/Code/alticelabs/"]
-    path = ~/config/git/alticelabs.config
+    path = ~/.dotfiles/git/alticelabs.config
 [web]
     browser = google-chrome-stable
 [core]
     autocrlf = input
     editor = nvim
-    excludesfile = ~/config/git/gitignore
-    attributesfile = ~/config/git/gitattributes
+    excludesfile = ~/.dotfiles/git/gitignore
+    attributesfile = ~/.dotfiles/git/gitattributes
     pager = delta
 [init]
     defaultBranch = main
@@ -25,7 +25,7 @@
 [commit]
     gpgsign = true
     verbose = true
-    template = ~/config/git/git-commit-msg-template
+    template = ~/.dotfiles/git/git-commit-msg-template
 [tag]
     gpgsign = true
 [alias]
