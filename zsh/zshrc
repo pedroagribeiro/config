@@ -36,3 +36,5 @@ if grep -q "microsoft" /proc/version > /dev/null 2>&1; then
         fi
 fi
 
+# init tmux session
+source $DOTFILES/tmux/tmux.init
