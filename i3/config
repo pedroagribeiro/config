@@ -120,3 +120,6 @@ bar {
 	tray_output primary
 }
 
+# Startup commands
+exec --no-startup-id beh --bg-scale ~/.dotfiles/wallpapers/railroad.jpg  
+
