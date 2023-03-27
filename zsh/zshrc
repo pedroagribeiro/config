@@ -7,6 +7,7 @@
 
 export GPG_TTY=$(tty)
 export DOTFILES="$HOME/.dotfiles"
+export PATH="$HOME/.local/bin:$PATH"
 
 for module in $(ls $DOTFILES/zsh/*.zsh); do
   source $module
