@@ -1,1 +1,2 @@
-print("hello from pedro")
+require("pedro.set")
+require("pedro.remap")

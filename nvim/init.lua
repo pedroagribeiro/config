@@ -1,2 +1,2 @@
-require("pedro.remap")
-print("pedro")
+require("pedro")
+
