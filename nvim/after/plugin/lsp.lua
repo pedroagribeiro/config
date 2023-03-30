@@ -12,7 +12,7 @@ lsp.ensure_installed({
     'docker_compose_language_service',
     'gopls',
     'lua_ls',
-    'pylsp',
+    'pyright',
 })
 
 local cmp = require('cmp')
