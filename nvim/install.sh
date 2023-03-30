@@ -23,6 +23,11 @@ function install_packer {
 	~/.local/share/nvim/site/pack/packer/start/packer.nvim
 }
 
+function github_copilot {
+    git clone https://github.com/github/copilot.vim.git \
+  ~/.config/nvim/pack/github/start/copilot.vim
+}
+
 
 custom_neovim_install
 
