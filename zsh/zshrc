@@ -18,6 +18,9 @@ source $DOTFILES/zsh/aliases.zsh
 # go to working directory if it has one
 gtwd
 
+# direnv
+eval "$(direnv hook zsh)"
+
 # for init_file in $(ls $DOTFILES/**/*.init); do
 #   source $init_file
 # done
