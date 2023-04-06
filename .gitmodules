@@ -1,0 +1,3 @@
+[submodule "alticelabs"]
+	path = alticelabs
+	url = https://github.com/pedroagribeiro/config-alticelabs
