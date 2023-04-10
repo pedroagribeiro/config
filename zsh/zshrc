@@ -5,11 +5,13 @@
 #    _ / /\__ \ | | | | | (__
 #   (_)___|___/_| |_|_|  \___|
 
+export RUSTPATH="$HOME/.asdf/install/rust/1.68.0"
 export GPG_TTY=$(tty)
 export DOTFILES="$HOME/.dotfiles"
 export PATH="$HOME/.local/bin:$PATH"
-export GOROOT="$HOME/.asdf/installs/golang/1.18.4/go"
+export GOROOT="$HOME/.asdf/installs/golang/1.20/go"
 export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$RUSTPATH/bin
 export PATH=$(go env GOPATH)/bin:$PATH
 
 for module in $(ls $DOTFILES/zsh/*.zsh); do
@@ -31,20 +33,20 @@ eval "$(direnv hook zsh)"
 # Docker atomatic initialization
 # Ensure Docker is running on WSL 2. This expects you've installed Docker and
 # Docker Compose directly within your WSL distro instead of Docker Desktop.
-# if grep -q "microsoft" /proc/version > /dev/null 2>&1; then
-#     DOCKER_DIR=/mnt/wsl/shared-docker
-#     DOCKER_SOCK="$DOCKER_DIR/docker.sock"
-#     export DOCKER_HOST="unix://$DOCKER_SOCK"
-#     if [ ! -S "$DOCKER_SOCK" ]; then
-#         mkdir -pm o=,ug=rwx "$DOCKER_DIR"
-#         sudo chgrp docker "$DOCKER_DIR"
-#         /mnt/c/Windows/System32/wsl.exe -d $WSL_DISTRO_NAME sh -c "nohup sudo -b dockerd < /dev/null > $DOCKER_DIR/dockerd.log 2>&1"
-#     fi
-# fi
+if grep -q "microsoft" /proc/version > /dev/null 2>&1; then
+    DOCKER_DIR=/mnt/wsl/shared-docker
+    DOCKER_SOCK="$DOCKER_DIR/docker.sock"
+    export DOCKER_HOST="unix://$DOCKER_SOCK"
+    if [ ! -S "$DOCKER_SOCK" ]; then
+        mkdir -pm o=,ug=rwx "$DOCKER_DIR"
+        sudo chgrp docker "$DOCKER_DIR"
+        /mnt/c/Windows/System32/wsl.exe -d $WSL_DISTRO_NAME sh -c "nohup sudo -b dockerd < /dev/null > $DOCKER_DIR/dockerd.log 2>&1"
+    fi
+fi
 
 # Change docker host to podman
 export DOCKER_HOST='unix:///Users/pedro/.local/share/containers/podman/machine/podman-machine-default/podman.sock'
 
-# init tmux session
-source $DOTFILES/tmux/tmux.init
+# Launch zellij
+eval "$(zellij setup --generate-auto-start zsh)"
 
