@@ -45,7 +45,7 @@ if grep -q "microsoft" /proc/version > /dev/null 2>&1; then
 fi
 
 # Change docker host to podman
-export DOCKER_HOST='unix:///Users/pedro/.local/share/containers/podman/machine/podman-machine-default/podman.sock'
+# export DOCKER_HOST='unix:///Users/pedro/.local/share/containers/podman/machine/podman-machine-default/podman.sock'
 
 # Launch zellij
 eval "$(zellij setup --generate-auto-start zsh)"
