@@ -231,12 +231,26 @@ themes {
         white "#E5E9F0"
         orange "#D08770"
     }
+
+    dracula {
+        fg 248 248 242
+        bg 40 42 54
+        black 0 0 0
+        red 255 85 85
+        green 80 250 123
+        yellow 241 250 140
+        blue 98 114 164
+        magenta 255 121 198
+        cyan 139 233 253
+        white 255 255 255
+        orange 255 184 108
+    }
 }
 
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-theme "nord"
+theme "dracula"
 
 // The name of the default layout to load on startup
 // Default: "default"
