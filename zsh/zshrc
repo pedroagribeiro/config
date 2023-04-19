@@ -51,5 +51,5 @@ fi
 eval "$(starship init zsh)"
 
 # Launch zellij
-eval "$(zellij setup --generate-auto-start zsh)"
+# eval "$(zellij setup --generate-auto-start zsh)"
 
