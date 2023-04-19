@@ -20,6 +20,8 @@ execute "git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/
 
 execute "git clone https://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-syntax-highlighting" "Clonning zsh-syntax-highlighting..." 
 
+execute "curl -sS https://starship.rs/install.sh | sh" "Installing Startship prompt..."
+
 symlink "$HOME/.dotfiles/zsh/zshrc" "$HOME/.zshrc"
 
 execute "sudo chsh --shell $(command -v zsh) $USER" "Changing $USER's shell to $(command -v zsh)"
