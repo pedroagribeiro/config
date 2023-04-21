@@ -14,11 +14,20 @@ export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$RUSTPATH/bin
 export PATH=$(go env GOPATH)/bin:$PATH
 
+# Load general zsh modules
 for module in $(ls $DOTFILES/zsh/*.zsh); do
-  source $module
+    source $module
 done
 
+# Load Alticelabs zsh modules
+for module in $(ls $DOTFILES/alticelabs/zsh/*.zsh); do
+    source $module
+done
+
+# Source general aliases
 source $DOTFILES/zsh/aliases.zsh
+# Source AlticeLabs aliases
+source $DOTFILES/alticelabs/zsh/aliases.zsh
 
 # go to working directory if it has one
 gtwd
