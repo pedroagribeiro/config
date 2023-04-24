@@ -20,7 +20,7 @@ for module in $(ls $DOTFILES/zsh/*.zsh); do
 done
 
 # Load Alticelabs zsh modules
-if [[ -f "$DOTFILES/alticelabs/zsh" ]]; then
+if [[ -d "$DOTFILES/alticelabs/zsh" ]]; then
     for module in $(ls $DOTFILES/alticelabs/zsh/*.zsh); do
         source $module
     done
