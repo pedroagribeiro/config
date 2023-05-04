@@ -61,7 +61,7 @@ fi
 # export DOCKER_HOST='unix:///Users/pedro/.local/share/containers/podman/machine/podman-machine-default/podman.sock'
 
 # Launch Startship
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 # Launch zellij
 # eval "$(zellij setup --generate-auto-start zsh)"
