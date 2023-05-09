@@ -1,5 +1,7 @@
 #/bin/bash
 
+# Reference: https://dev.solita.fi/2021/12/21/docker-on-wsl2-without-docker-desktop.html
+
 # Install pre-required packages
 sudo apt update
 sudo apt install --no-install-recommends apt-transport-https ca-certificates curl gnupg2
